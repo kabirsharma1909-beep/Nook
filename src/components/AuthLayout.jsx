@@ -8,7 +8,7 @@ export default function AuthLayout({ eyebrow, title, subtitle, children, wide = 
       <header className="auth-layout__nav">
         <div className="container auth-layout__nav-row">
           <Link to="/" className="nav__brand">
-            Reading Profile
+            Nook
           </Link>
           <ThemeSwitcher />
         </div>

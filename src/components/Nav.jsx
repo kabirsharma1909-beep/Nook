@@ -9,7 +9,7 @@ export function MarketingNav() {
     <header className="nav nav--marketing">
       <div className="container nav__row">
         <Link to="/" className="nav__brand">
-          Reading Profile
+          Nook
         </Link>
         <nav className="nav__links">
           <a href="#what-is-dyslexia">About</a>
@@ -46,7 +46,7 @@ export function AppNav() {
     <header className="nav nav--app">
       <div className="container nav__row">
         <Link to="/dashboard" className="nav__brand">
-          Reading Profile
+          Nook
         </Link>
         <nav className="nav__links">
           <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'is-active' : '')}>

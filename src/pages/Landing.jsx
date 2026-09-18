@@ -44,6 +44,14 @@ export default function Landing() {
   return (
     <div className="landing">
       <MarketingNav />
+
+      <section className="landing-mast">
+        <div className="landing-mast__inner">
+          <span className="landing-mast__kicker">A reading profile, built early</span>
+          <h1 className="landing-mast__title">Nook</h1>
+        </div>
+      </section>
+
       <BookIntro />
 
       <section className="section" id="what-is-dyslexia">
@@ -104,9 +112,9 @@ export default function Landing() {
               What the research says
             </h2>
             <p className="text-body measure" style={{ marginBottom: 40 }}>
-              A few figures for context. Sources are linked under each one, and can be swapped for updated
-              citations at any time &mdash; see <code>src/data/statistics.js</code>.
-            </p>
+               A few figures for context, each with its source linked below. As newer research is published,
+               these can be swapped out at any time.
+           </p>
           </ScrollSection>
           <div className="landing-stats-grid">
             {statistics.map((s) => (
@@ -196,7 +204,7 @@ export default function Landing() {
 
       <footer className="landing-footer">
         <div className="container landing-footer__row">
-          <span className="text-small">Reading Profile &mdash; a screening tool, not a diagnostic one.</span>
+          <span className="text-small">Nook &mdash; a screening tool, not a diagnostic one.</span>
           <span className="text-small">Built for early identification, not for "unlocking potential."</span>
         </div>
       </footer>
