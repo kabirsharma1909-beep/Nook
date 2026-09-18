@@ -1,0 +1,17 @@
+.results-page__inner {
+  padding: 48px 28px 100px;
+  max-width: 900px;
+}
+
+.results-page__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.results-page__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}

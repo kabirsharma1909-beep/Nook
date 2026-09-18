@@ -1,0 +1,19 @@
+.progress-chart {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+}
+.progress-chart svg { width: 100%; height: auto; }
+.progress-chart__legend {
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.progress-chart--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  text-align: center;
+}

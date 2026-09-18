@@ -1,0 +1,32 @@
+.stat-counter {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+
+.stat-counter__value {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 2.6vw + 1rem, 3.6rem);
+  color: var(--ink);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.stat-counter__suffix {
+  font-size: 0.42em;
+  color: var(--accent);
+}
+
+.stat-counter__label {
+  margin-top: 12px;
+  max-width: 42ch;
+}
+
+.stat-counter__source {
+  margin-top: 10px;
+}
+.stat-counter__source a {
+  color: var(--ink-faint);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

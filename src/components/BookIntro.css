@@ -1,0 +1,115 @@
+.book-intro {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.book-intro__stage {
+  position: absolute;
+  inset: 0;
+  perspective: 2200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-intro__seam {
+  position: absolute;
+  top: 12%;
+  bottom: 12%;
+  left: 50%;
+  width: 1px;
+  background: var(--line-strong);
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.book-intro__page {
+  position: absolute;
+  top: 8%;
+  bottom: 8%;
+  width: 34%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  z-index: 4;
+}
+
+.book-intro__page--left {
+  left: 50%;
+  transform-origin: left center;
+  border-radius: 0 4px 4px 0;
+  margin-left: 0;
+  transform: translateX(-100%) rotateY(0deg);
+}
+
+.book-intro__page--right {
+  right: 50%;
+  transform-origin: right center;
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  transform: translateX(100%) rotateY(0deg);
+}
+
+.book-intro__content {
+  position: relative;
+  z-index: 3;
+  max-width: 780px;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.book-intro__kicker {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+  opacity: 0;
+}
+
+.book-intro__headline {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 3.4vw + 1rem, 3.6rem);
+  line-height: 1.18;
+  color: var(--ink);
+  opacity: 0;
+}
+
+.scramble-word {
+  display: inline-block;
+}
+.scramble-word.is-scramble-target {
+  position: relative;
+}
+.scramble-char {
+  display: inline-block;
+  position: relative;
+  will-change: transform, opacity;
+}
+
+.book-intro__scroll-cue {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  z-index: 3;
+}
+.book-intro__scroll-cue span {
+  width: 1px;
+  height: 28px;
+  background: var(--line-strong);
+}
+
+@media (max-width: 720px) {
+  .book-intro__page { width: 20%; }
+}

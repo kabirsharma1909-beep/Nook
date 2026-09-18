@@ -1,0 +1,45 @@
+.exercises-page__inner {
+  padding: 56px 28px 100px;
+}
+
+.exercises-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.exercises-page__filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.exercises-page__filter.is-active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.exercises-page__priority-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.exercises-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 720px) {
+  .exercises-page__grid { grid-template-columns: 1fr; }
+}

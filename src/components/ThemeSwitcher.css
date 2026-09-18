@@ -1,0 +1,101 @@
+.theme-switcher {
+  position: relative;
+}
+
+.theme-switcher__trigger {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 7px 14px 7px 8px;
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 0.85rem;
+}
+
+.theme-switcher__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  flex-shrink: 0;
+}
+.theme-switcher__dot[data-swatch='paper'] { background: linear-gradient(135deg, #f3eee2 50%, #a23e2e 50%); }
+.theme-switcher__dot[data-swatch='charcoal'] { background: linear-gradient(135deg, #201f1a 50%, #7fa678 50%); }
+.theme-switcher__dot[data-swatch='slate'] { background: linear-gradient(135deg, #eef1f3 50%, #2e4a6b 50%); }
+
+.theme-switcher__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  width: 240px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  z-index: 60;
+}
+.theme-switcher__panel--right { right: 0; }
+.theme-switcher__panel--left { left: 0; }
+
+.theme-switcher__group-label {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  margin: 4px 0 8px;
+}
+.theme-switcher__group-label:not(:first-child) { margin-top: 16px; }
+
+.theme-switcher__mode-row {
+  display: flex;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.theme-switcher__mode-btn {
+  flex: 1;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.theme-switcher__mode-btn.is-active {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.theme-switcher__palette-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.theme-switcher__palette-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+.theme-switcher__palette-btn:hover { background: var(--surface-2); }
+.theme-switcher__palette-btn.is-active {
+  border-color: var(--line-strong);
+  background: var(--surface-2);
+}
+.theme-switcher__palette-name {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+.theme-switcher__palette-desc {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}

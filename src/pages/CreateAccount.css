@@ -1,0 +1,37 @@
+.create-account__role-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.35s var(--ease-out);
+}
+
+.create-account__role {
+  text-align: left;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.create-account__role.is-active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+
+.create-account__form {
+  animation: fadeIn 0.35s var(--ease-out);
+}
+
+.create-account__form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

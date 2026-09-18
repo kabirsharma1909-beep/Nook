@@ -1,0 +1,45 @@
+.skill-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.skill-profile.is-compact { gap: 16px; }
+
+.skill-profile__row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.skill-profile__label {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.skill-profile__band {
+  font-size: 0.76rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+}
+.skill-profile__band--strength { border-color: var(--good); color: var(--good); }
+.skill-profile__band--developing { border-color: var(--accent-2); color: var(--ink-soft); }
+.skill-profile__band--attention { border-color: var(--danger); color: var(--danger); }
+
+.skill-profile__track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.skill-profile__fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s var(--ease-out);
+}
+.skill-profile__fill--strength { background: var(--good); }
+.skill-profile__fill--developing { background: var(--accent-2); }
+.skill-profile__fill--attention { background: var(--danger); }

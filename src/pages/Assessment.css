@@ -1,0 +1,17 @@
+.assessment-page__inner {
+  padding: 80px 28px 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.assessment-page__intro {
+  max-width: 560px;
+  text-align: center;
+  padding: 56px 48px;
+}
+.assessment-page__intro .measure { margin-left: auto; margin-right: auto; }
+
+.assessment-page__finishing {
+  padding: 120px 0;
+  text-align: center;
+}

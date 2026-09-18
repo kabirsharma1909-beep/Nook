@@ -1,0 +1,64 @@
+.assessment-question {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.assessment-question__progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.assessment-question__progress-track {
+  flex: 1;
+  height: 4px;
+  background: var(--surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.assessment-question__progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s var(--ease-out);
+}
+
+.assessment-question__prompt {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.4vw + 1.1rem, 2rem);
+  line-height: 1.35;
+  margin-bottom: 40px;
+  color: var(--ink);
+}
+
+.assessment-question__options {
+  display: grid;
+  gap: 12px;
+}
+
+.assessment-question__option {
+  text-align: left;
+  font-size: 1.05rem;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s var(--ease-out), background-color 0.15s var(--ease-out), transform 0.15s var(--ease-out);
+}
+.assessment-question__option:hover:not(:disabled) {
+  border-color: var(--ink);
+  transform: translateX(2px);
+}
+.assessment-question__option:disabled { cursor: default; }
+.assessment-question__option.is-correct {
+  border-color: var(--good);
+  background: color-mix(in srgb, var(--good) 14%, var(--surface));
+}
+.assessment-question__option.is-incorrect {
+  border-color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 12%, var(--surface));
+}
+.assessment-question__option.is-reveal {
+  border-color: var(--good);
+}

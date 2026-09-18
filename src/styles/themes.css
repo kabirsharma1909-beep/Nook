@@ -1,0 +1,128 @@
+/*
+  Theme system.
+  Two independent axes:
+  - data-palette: paper | charcoal | slate  (curated identity)
+  - data-mode: light | dark                  (accessibility preference)
+
+  Each palette defines its own light and dark reading, rather than
+  inverting a single set of colors, so every combination is designed
+  on purpose.
+*/
+
+:root {
+  --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 3px;
+  --radius: 5px;
+  --container: 1180px;
+  --measure: 62ch;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ---------- Paper: warm paper, ink, muted red ---------- */
+:root[data-palette='paper'][data-mode='light'] {
+  --bg: #f3eee2;
+  --surface: #ebe3d2;
+  --surface-2: #e2d8c2;
+  --ink: #241f1a;
+  --ink-soft: #5c5344;
+  --ink-faint: #8a7f6c;
+  --accent: #a23e2e;
+  --accent-2: #7c5c33;
+  --accent-ink: #fbf3ea;
+  --line: #d7c9ae;
+  --line-strong: #c1af8d;
+  --danger: #a23e2e;
+  --good: #4c6b3f;
+}
+:root[data-palette='paper'][data-mode='dark'] {
+  --bg: #1c1913;
+  --surface: #26221a;
+  --surface-2: #322c20;
+  --ink: #f1e7d5;
+  --ink-soft: #bcae91;
+  --ink-faint: #8b7f68;
+  --accent: #dd8a6b;
+  --accent-2: #c9a45f;
+  --accent-ink: #1c1913;
+  --line: #3c3526;
+  --line-strong: #4d4430;
+  --danger: #dd8a6b;
+  --good: #93b17f;
+}
+
+/* ---------- Charcoal: dark charcoal, cream, muted green ---------- */
+:root[data-palette='charcoal'][data-mode='light'] {
+  --bg: #edeae1;
+  --surface: #e2ddd0;
+  --surface-2: #d5cebb;
+  --ink: #201f1a;
+  --ink-soft: #52564a;
+  --ink-faint: #82806f;
+  --accent: #4f6b48;
+  --accent-2: #78624a;
+  --accent-ink: #f4f2e8;
+  --line: #cec7b3;
+  --line-strong: #b7ae94;
+  --danger: #9c4a35;
+  --good: #4f6b48;
+}
+:root[data-palette='charcoal'][data-mode='dark'] {
+  --bg: #1b1c18;
+  --surface: #232420;
+  --surface-2: #2d2f27;
+  --ink: #ece7d8;
+  --ink-soft: #a7ac97;
+  --ink-faint: #767a68;
+  --accent: #86ad78;
+  --accent-2: #c2a25e;
+  --accent-ink: #14150f;
+  --line: #33352c;
+  --line-strong: #414437;
+  --danger: #d1856a;
+  --good: #86ad78;
+}
+
+/* ---------- Slate: soft blue, off-white, dark navy ---------- */
+:root[data-palette='slate'][data-mode='light'] {
+  --bg: #eef1f3;
+  --surface: #e3e8eb;
+  --surface-2: #d5dde1;
+  --ink: #16202b;
+  --ink-soft: #4d5c69;
+  --ink-faint: #7c8a96;
+  --accent: #2e4a6b;
+  --accent-2: #5d7a8f;
+  --accent-ink: #f1f5f7;
+  --line: #c8d1d7;
+  --line-strong: #adbac2;
+  --danger: #a34738;
+  --good: #3f6e5c;
+}
+:root[data-palette='slate'][data-mode='dark'] {
+  --bg: #111820;
+  --surface: #1a222b;
+  --surface-2: #222c37;
+  --ink: #e6edf1;
+  --ink-soft: #93a4b0;
+  --ink-faint: #63717d;
+  --accent: #7fa4cc;
+  --accent-2: #7fb0a1;
+  --accent-ink: #0d1217;
+  --line: #29323c;
+  --line-strong: #364150;
+  --danger: #d1897a;
+  --good: #7fb0a1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

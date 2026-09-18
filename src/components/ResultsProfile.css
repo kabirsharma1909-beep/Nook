@@ -1,0 +1,51 @@
+.results-profile__signal {
+  padding: 32px 34px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  margin-bottom: 40px;
+}
+.results-profile__signal h2 { margin: 8px 0 12px; }
+.results-profile__signal--consider-evaluation {
+  border-color: var(--danger);
+}
+.results-profile__signal--watch {
+  border-color: var(--accent-2);
+}
+.results-profile__signal--typical {
+  border-color: var(--good);
+}
+
+.results-profile__body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.results-profile__scores h3,
+.results-profile__next h3 {
+  margin-bottom: 20px;
+}
+
+.results-profile__next {
+  border-left: 1px solid var(--line);
+  padding-left: 40px;
+}
+.results-profile__list {
+  margin: 0 0 24px;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+
+.results-profile__disclaimer {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  max-width: 70ch;
+}
+
+@media (max-width: 780px) {
+  .results-profile__body { grid-template-columns: 1fr; }
+  .results-profile__next { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 28px; }
+}
