@@ -1,4 +1,4 @@
-# Reading Profile — early literacy screening (MVP)
+# Nook — early literacy screening (MVP)
 
 A screening prototype, not a diagnostic tool. It builds a reading profile
 across five domains commonly used in early literacy screening, so a parent
