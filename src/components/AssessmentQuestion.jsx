@@ -1,9 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { shuffleQuestionOptions } from '../utils/shuffle.js';
 import './AssessmentQuestion.css';
 
-export default function AssessmentQuestion({ question, index, total, onAnswer }) {
+export default function AssessmentQuestion({ question: rawQuestion, index, total, onAnswer }) {
   const [selected, setSelected] = useState(null);
   const startRef = useRef(Date.now());
+
+  // Shuffle once per question (not on every render) so the correct
+  // answer isn't always in the same position, and doesn't re-shuffle
+  // out from under the user after they've clicked.
+  const question = useMemo(() => shuffleQuestionOptions(rawQuestion), [rawQuestion.id]);
 
   useEffect(() => {
     startRef.current = Date.now();

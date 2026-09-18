@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { sampleQuestions } from '../data/questions.js';
+import { shuffleQuestionOptions } from '../utils/shuffle.js';
 import './SampleAssessment.css';
 
 export default function SampleAssessment() {
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState(null);
 
-  const question = sampleQuestions[index];
+  const question = useMemo(() => shuffleQuestionOptions(sampleQuestions[index]), [index]);
   const isLast = index === sampleQuestions.length - 1;
 
   function choose(i) {
